@@ -10,26 +10,27 @@ const filters = getFilters();
 -------------------------------------- */
 // Render application todos based on filters
 export const renderTodos = (todos, filters) => {
+    // Incomplete Todos
     const filteredTodos = todos.filter((todo) => {
         const searchTextMatch = todo.body.toLowerCase().includes(filters.searchText.toLowerCase());
         const hideCompletedMatch = !filters.hideCompleted || !todo.completed;
 
         return searchTextMatch && hideCompletedMatch;
     });
-
     document.querySelector('#todos').innerHTML = '';
-    filteredTodos.forEach((todo) => {
+    filteredTodos.map((todo) => {
         if (!todo.completed) {
             document.querySelector('#todos').appendChild(generateTodoDOM(todo));
         }
     });
 
+
+    // Completed Todos
     const completedTodos = filteredTodos.filter((todo) => {
         return todo.completed;
     });
-
     document.querySelector('#completedTodos').innerHTML = '';
-    completedTodos.forEach((todo) => {
+    completedTodos.map((todo) => {
         document.querySelector('#completedTodos').appendChild(generateCompletedTodoDOM(todo));
     });
 
@@ -152,7 +153,7 @@ export const deleteTodo = (id) => {
         } else {
             console.error('Todo not available');
             alert('Todo not available');
-            return null;
+            return [];
         }
     });
     todos = remainingTodos;
