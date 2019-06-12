@@ -1,0 +1,206 @@
+:root {
+    --sans-font: 'Roboto', sans-serif;
+    --subheader-font: 'Roboto Condensed', sans-serif;
+    --header-font: 'Gugi', cursive;
+    --dark: #444444;
+    --darker: #222222;
+    --gray: #999;
+    --light: #d3d2c7;
+    --lightest: #f1f1f1;
+    --green: #3cbbb0;
+    --dark-red: #C02928;
+    --baby-blue: #69BAE0;
+}
+
+body {
+    font-family: var(--sans-font);
+}
+
+h1,
+h2 {
+    font-family: var(--header-font);
+    color: var(--darker);
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--subheader-font);
+    color: var(--dark);
+}
+
+p,
+ol,
+ul,
+li,
+th,
+td,
+tr {
+    font-family: var(--sans-font);
+    color: var(--dark);
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.container {
+    margin: 3rem;
+    text-align: left;
+}
+
+p.subtitle {
+    color: var(--dark);
+    font-family: var(--subheader-font);
+    font-size: 1.3rem;
+}
+
+li.completed {
+    color: var(--light);
+}
+
+.card {
+    background-color: var(--lightest);
+    border-radius: 5px;
+    width: 100%;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+#incompleteTodos {
+    font-size: 1.2rem;
+    color: var(--dark-red);
+}
+
+button.btn {
+    font-family: var(--sans-font);
+    border-radius: 5px;
+    padding: 0.7rem 1rem;
+    margin: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: var(--green) 0px -3px 0px 0px inset;
+}
+
+
+button.add {
+    background-color: var(--light);
+    border: 1px solid var(--light);
+    color: var(--green);
+    margin-left: 0;
+    box-shadow: 0;
+    box-shadow: var(--green) 0px -3px 0px 0px inset;
+}
+
+button.add:hover {
+    background-color: var(--light);
+    border: 1px solid var(--light);
+    color: var(--dark);
+    box-shadow: var(--dark) 0px -3px 0px 0px inset;
+}
+
+
+input[type="text"] {
+    width: 91%;
+    display: block;
+    padding: 0.5rem 1rem;
+    font-family: var(--sans-font);
+    font-size: 0.8rem;
+    border: 1px solid var(--green);
+    /* border-left: 3px solid var(--light); */
+    box-shadow: var(--green) 0px -3px 0px 0px inset;
+}
+
+
+input[type="text"]#searchTodoInput {
+    width: 90%;
+    padding: 0.5rem 1rem;
+    font-family: var(--sans-font);
+    font-size: 0.8rem;
+    border: 1px solid var(--light);
+    /* border-left: 3px solid var(--dark); */
+    box-shadow: var(--light) 0px -3px 0px 0px inset;
+}
+
+label {
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* Incomplete Todos */
+#todos>div {
+    border-top: 1px solid var(--light);
+    padding: 0.70rem 0;
+}
+
+#todos>div>button {
+    margin-left: 1rem;
+    color: var(--dark-red);
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    float: right;
+
+}
+
+#todos>div>a {
+    margin-left: 1rem;
+    text-align: right;
+}
+
+/* Completed Todos */
+#completedTodos>div {
+    border-top: 1px solid var(--light);
+    padding: 0.70rem 0;
+}
+
+#completedTodos>div>button {
+    margin-left: 1rem;
+    color: var(--dark-red);
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    float: right;
+
+}
+
+#completedTodos>div>a {
+    margin-left: 1rem;
+    text-align: right;
+}
+
+div.completed>a>a {
+    color: var(--gray);
+    text-decoration: line-through;
+}
+
+p.alert {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.2;
+    border-radius: 5px;
+}
+
+p.alert-success {
+    background-color: var(--green);
+    color: #123A36;
+    border: 1px solid var(--green);
+}
+
+p.alert-danger {
+    background-color: var(--dark-red);
+    color: #400000;
+    border: 1px solid var(--dark-red);
+}
+
+.hidden {
+    display: none;
+}

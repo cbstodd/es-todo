@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>JavaScript Playground</title>
+        <!-- Silence Favicon Error -->
+        <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+        <link href="https://fonts.googleapis.com/css?family=Gugi|Roboto|Roboto+Condensed" rel="stylesheet">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet"
+              href="https://pro.fontawesome.com/releases/v5.5.0/css/all.css"
+              integrity="sha384-j8y0ITrvFafF4EkV1mPW0BKm6dp3c+J9Fky22Man50Ofxo2wNe5pT1oZejDH9/Dt"
+              crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>ES6 Playground</h1>
+            <p id="alertMsg"></p>
+            <p>
+                <input type="text"
+                       id="searchTodoInput"
+                       placeholder="Search Todos">
+            </p>
+
+            <div class="card">
+                <div class="card-body">
+                    <form id="newTodoForm">
+                        <input type="text"
+                               id="addTodoInput"
+                               name="newTodo"
+                               placeholder="Add new todo...">
+
+                        <button class="btn add" id="addTodoBtn">
+                            <i class="fa fa-plus"></i> Add Todo
+                        </button>
+                        <label class="checkbox">
+                            <input type="checkbox"
+                                   id="hideCompleted">
+                            Hide completed
+                        </label>
+
+                        <select name="sort" id="sort">
+                            <option value="">-- Sort Todos --</option>
+                            <option value="lastEdited">Last Edited</option>
+                            <option value="recentlyCreated">Newest</option>
+                            <option value="oldestCreated">Oldest</option>
+                            <option value="alphabetical">Alphabetical (A-Z)</option>
+                            <option value="alphabeticalZA">Alphabetical (Z-A)</option>
+                        </select>
+                    </form>
+
+                    <h4>
+                       Todos:
+                    </h4>
+                    <div id="todos">
+                        <!--~ Todos Rendered here ~-->
+                    </div>
+
+                </div>
+            </div>
+            <div class="card" style="margin-top:1rem;">
+                <div class="card-body">
+                    <h4>Completed</h4>
+                    <div id="completedTodos">
+                        <!--~ Incomplete Todos Rendered here ~-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <script src="./src/uuidv4.js"></script>
+        <script src="./src/data.js"></script>
+        <script src="./src/functions.js"></script> -->
+        <script src="./scripts/bundle.js"></script>
+    </body>
+
+</html>
