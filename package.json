@@ -4,11 +4,10 @@
   "description": "Vanilla Ecmascript todo app",
   "main": "index.js",
   "scripts": {
-    "dev": "lite-server public/index.html",
-    "build": "babel ./src/scripts/index.js --out-file public/scripts/bundle.js",
-    "webpack": "webpack",
-    "start": "node ./server/server.js",
-    "nodemon": "nodemon ./server/server.js",
+    "serve": "lite-server",
+    "dev-server": "webpack-dev-server",
+    "api-run": "node ./server/server.js",
+    "api-serve": "nodemon ./server/server.js",
     "test-watch": "nodemon --exec 'npm test'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,7 +20,8 @@
     "babel-loader": "^8.0.6",
     "lite-server": "^2.5.3",
     "webpack": "^4.33.0",
-    "webpack-cli": "^3.3.4"
+    "webpack-cli": "^3.3.4",
+    "webpack-dev-server": "^3.7.1"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
