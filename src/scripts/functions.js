@@ -1,7 +1,6 @@
 /* ##################### FUNCTIONS ##################### */
-
 import { saveTodosToLocalStorage, renderAlertMsg, getSavedTodos, getFilters } from './data';
-import uuidv4 from 'uuid';
+import uuidv4 from 'uuid/v4';
 
 let todos = getSavedTodos();
 const filters = getFilters();
@@ -137,6 +136,7 @@ export const addTodo = (todoBody) => {
         id: `${_id}`,
         body: todoBody,
         completed: false,
+        completedAt: null,
         createdAt: Date.now(),
         updatedAt: Date.now()
     };
@@ -176,6 +176,7 @@ export const toggleCompletedTodo = (id) => {
             id: `${todo[ 0 ].id}`,
             body: todo[ 0 ].body,
             completed: true,
+            completedAt: Date.now(),
             createdAt: todo[ 0 ].createdAt,
             updatedAt: Date.now()
         };
@@ -190,6 +191,7 @@ export const toggleCompletedTodo = (id) => {
             id: `${todo[ 0 ].id}`,
             body: todo[ 0 ].body,
             completed: false,
+            completedAt: null,
             createdAt: todo[ 0 ].createdAt,
             updatedAt: Date.now()
         };

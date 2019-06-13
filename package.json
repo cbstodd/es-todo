@@ -4,8 +4,8 @@
   "description": "Vanilla Ecmascript todo app",
   "main": "index.js",
   "scripts": {
-    "serve": "lite-server",
-    "dev-server": "webpack-dev-server",
+    "webpack-dev-server": "webpack-dev-server --mode development",
+    "build-production": "webpack --mode production",
     "api-run": "node ./server/server.js",
     "api-serve": "nodemon ./server/server.js",
     "test-watch": "nodemon --exec 'npm test'",

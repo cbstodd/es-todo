@@ -1,5 +1,5 @@
 /* ##################### TODOs-EDIT ##################### */
-import { getSavedTodos } from './data';
+import { saveTodosToLocalStorage, renderAlertMsg, getSavedTodos } from './data';
 // Gets id from location hash path 1 to to rest
 const todoBody = document.querySelector('#editTodoInput');
 const todoId = location.hash.substring(1);
@@ -67,6 +67,7 @@ const updateTodo = (todoEditBody) => {
         id: `${todo.id}`,
         body: todoEditBody,
         completed: todo.completed,
+        completedAt: todo.completedAt || null,
         createdAt: todo.createdAt,
         updatedAt: Date.now()
     };
